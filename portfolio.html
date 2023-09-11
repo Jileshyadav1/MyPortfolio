@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!--for animation-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,9 @@
         * {
             margin: 0;
             padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
         }
 
         body {
@@ -34,6 +38,7 @@
             margin: auto;
             align-items: center;
             background-color: transparent;
+            
         }
 
         .logo {
@@ -146,7 +151,16 @@
             width: 425px;
             background-size: cover;
         }
-
+        .map-images {
+            background-image: url(#);
+            background-repeat: no-repeat;
+            background-position: 0 -75px;
+            -webkit-box-shadow: 0 10px 10px -10px #000000;
+            -moz-box-shadow: 0 10px 10px -10px #000000;
+            box-shadow: 0px 16px 4px -10px #41dde9;
+            width: 610px;
+            background-size: cover;
+        }
         /* @keyframes check {
             0% {
                 transform: translateY(-100px);
@@ -262,13 +276,76 @@
     font-size: 20px;
     text-shadow:  0 0 1px rgba(0, 0, 0, .5);
 }
-.bg-img{
-    background-image: url(Screenshot\ \(18\).png);
-    height: fit-content;
-    width: fit-content;
-    visibility:visible;
-    display: inline;
+
+.card:hover{
+
+color: #00E8F8 ;
+transition: 1s;
+
 }
+
+.bg-img{
+    background-image: url(bg.png);
+    height: 350px;
+    width:1250px;
+    display: grid;
+    place-items: center;
+    
+    /* rotate:calc(180deg); */
+}
+.button1{
+    background-color: #00E8F8;
+     padding: 10px; 
+     border-radius: 50px; 
+     font-size: large; 
+     margin-top: 50px;     
+    }
+.button_padding{
+    margin-bottom: 35px;
+}
+
+/* ANIMAIONS */
+@keyframes SlideInLeft{
+            from{
+                transform: translateX(-2200px);
+            }
+
+            to{
+                transform: translateX(0px);
+            }
+        }
+ @keyframes SlideInRight{
+            from{
+                transform: translateX(4200px);
+            }
+
+            to{
+                transform: translateX(0px);
+            }
+        }
+@keyframes UpDown{
+            from{
+                transform: translateY(10px);
+            }
+
+            to{
+                transform: translateY(0px);
+            }
+        }
+            
+               
+        section{
+            animation: SlideInLeft 2s ease-out 2ms 1 normal both;
+        } 
+        header{
+            animation: SlideInRight 2s ease-out 2ms 1 normal both;
+        }
+       
+        h1, p, a{
+            animation: SlideInRight 2s ease-out 2ms 1 normal both;
+        }
+
+
     </style>
 </head>
 
@@ -294,37 +371,40 @@
 
  <!--Social -->
 
-    <section id="social-section">
-        <div class="main">
+    <section id="social-section"  >
+        <div class="main"  data-aos="fade-left">
             <div class="detail"><!---Sarah -->
                 <h1><span>Hi, It's Me</span> <br> I'm <span style="color:#00E8F8;">Jilesh Yadav</span></h1>
                 <p>Lorem Ipsum is simply dummy text of the printing <br> and typesetting industry. </p>
-                <div class="social">
-                    <a href="#"><i class="bi bi-github"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
+                <div class="social button_padding">
+                    <a href="https://github.com/Jileshyadav1" target="_blank" ><i class="bi bi-github"></i></a>
+                    <a href="https://www.instagram.com/jilesh_yadav/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jilesh-yadav-74a761220/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.facebook.com/jilesh.yadav.98/" target="_blank"  ><i class="bi bi-facebook"></i></a>
+                </div>
+                <div class="contact-us-button">
+                   <a href="JIleshCV1.pdf" target="_top" class="button1">Download CV</a> 
                 </div>
             </div>
             <div class="images">
-                <img src="jilesh1.png" alt="" Hight="80%" width="auto">
+                <img src="jilesh1.png" alt="" height="80%" width="auto">
             </div>
         </div>
     </section>
 
     <!-- About me -->
 
-    <section id="Aboutme-section">
-        <div class="main">
-            <div class="images">
-                <img src="jilesh.png" alt="" Hight="80%" width="auto">
+    <section id="Aboutme-section" style="margin-top: -50px;">
+        <div class="main"  data-aos="fade-right">
+            <div class="images" data-aos="zoom-in" >
+                <img src="Jilesh-full.png" alt="" height="auto" width="430px">
             </div>
 
-            <div class="detail"><!---Sarah -->
+            <div class="detail" data-aos="flip-right"><!---Sarah -->
                 <h2><span style="color:#00E8F8;">About me</span></h2>
                 <p>I am a creative developer from the state of Wisconsin and I am excited<br> creating stunning websites and emails. My expertise lies in<br> translating designs into fully functional websites and emails while utilizing <br>my development skills to enhance and customize their features. My goal is <br>to craft visually appealing, user-friendly websites/emails that provide a<br> seamless browsing experience.
 
-                    <br><br>In my leisure time, I enjoy reading light novels and spending quality time<br> with my beloved wife and children. </p>
+                    <br><br>In my leisure time, I enjoy reading light novels and spending quality time<br> with my Family and Love once. </p>
                 <div class="social-">
                     <p style="color: #00E8F8;">Name<br>
                     <span style="color: #fff;">Jilesh Yadav</span></p>
@@ -349,10 +429,10 @@
 <!-- Skills -->
 
     <section id="skills-section">
-        <div class="main">
+        <div class="main"  data-aos="fade-left">
             
 
-            <div class="detail"><!---Sarah -->
+            <div class="detail" data-aos="fade-up-left"><!---Sarah -->
                 <h2><span style="color:#00E8F8;">Skills</span></h2>
                 <!-- <p>I am a creative developer fromthe state of Wisconsin and I am excited creating stunning websites and emails. My expertise lies in translating designs into fully functional websites and emails while utilizing my development skills to enhance and customize their features. My goal is to craft visually appealing, user-friendly websites/emails that provide a seamless browsing experience.
 
@@ -366,14 +446,16 @@
                          maiores doloribus sapiente veritatis accusamus <br> 
                          est numquam deserunt natus excepturi dolores tenetur! <br>
                         Ametbr explicabo quisquam et culpa ducimus?</p>
-                    <div class="social1">
+                    <div class="social1" data-aos="flip-left">
                         <a href="#"><i class="fa-brands fa-html5"></i></a>
                         <a href="#"><i class="fa-brands fa-css3-alt"></i></a>
                         <a href="#"><i class="fa-brands fa-js"></i></a>
-                        <a href="#"><i class="fa-brands fa-java"></i></a>
-                        <a href="#"><i class="fa-solid fa-database"></i></a>
                         <a href="#"><i class="bi bi-bootstrap"></i></a>
+                        <a href="#"><i class="fa-brands fa-java"></i></a>
+                        <a href="#"><i class="fa-solid fa-database"></i></a>   
+                        <a href="#"><i class="fa-brands fa-git-alt"></i></a> 
                         <a href="#"><i class="bi bi-wordpress"></i></a>
+                        
 
                     </div>
             </div>
@@ -384,34 +466,34 @@
 <!--portfolio -->
 
     <section id="Portfolio-section">
-        <div class="main">
+        <div class="main"  data-aos="fade-right">
             
 
             <div class="detail"><!---Sarah -->
                 <h2><span style="color:#00E8F8;">Portfolio</span></h2>
                 
                 <!-- cards -->
-                <div class="card">
+                <div class="card" data-aos="flip-right">
                     <img src="jilesh.png" class="card-image">
                     <h3 class="card-title">Project 1</h3>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="flip-right">
                     <img src="jilesh.png" class="card-image">
                     <h3 class="card-title">Project 2</h3>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="flip-right">
                     <img src="jilesh.png" class="card-image">
                     <h3 class="card-title">Project 3</h3>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="flip-right">
                     <img src="jilesh.png" class="card-image">
                     <h3 class="card-title">Project 4</h3>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="flip-right">
                     <img src="jilesh.png" class="card-image">
                     <h3 class="card-title">Project 5</h3>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="flip-right">
                     <img src="jilesh.png" class="card-image">
                     <h3 class="card-title">Project 6</h3>
                 </div>
@@ -432,8 +514,8 @@
 </section> -->
 
 <!-- Contact me  -->
-<section id="social-section">
-    <div class="main">
+<section id="Contact-section">
+    <div class="main"  data-aos="fade-left">
         <div class="detail"><!---Sarah --><h2><span style="color:#00E8F8;">Get In Touch </span></h2>
             <div class="detail" style="margin-top: 20px; margin-bottom: 20px;"><h3><span style="color:#00E8F8;">Contact me </span></h3></div>
             <input type="text" id="Name" placeholder="Name*" style="padding: 7px; border-radius: 7px; font-size: larger;" >
@@ -445,7 +527,7 @@
             </div>
         </div>
         <!-- Google Maps -->
-        <div class="images" style="margin-right:200px ;">
+        <div class="map-images" style="margin-right:0px ;">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7032.48182747072!2d76.71122089303259!3d28.199992253614603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d4f48960c2645%3A0x45a7d265c0931215!2sRasgan%2C%20Haryana%20123106!5e0!3m2!1sen!2sin!4v1693989782517!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
@@ -454,25 +536,39 @@
 <!-- footer -->
 
 <section id="social-section">
-    <div class="main">
-        <div class="detail"><div class="social">
-            <a href="#"><i class="bi bi-github"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-           
-        </div></div>
-        <div class="detail" style="z-index: -5px;">
-            <img src="Screenshot (18).png" alt="" height="300px" width="1250px" style="border-top-left-radius: 20px; border-top-right-radius: 20px; margin-bottom: 0px">
+    <div class="main"  data-aos="flip-up">
+        <div class="detail">
+            <div class="bg-img">
+            <div class="social">
+            <a href="https://github.com/Jileshyadav1"><i class="bi bi-github"></i></a>
+            <a href="https://www.instagram.com/jilesh_yadav/"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/jilesh-yadav-74a761220/"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <p style="margin-top: -120px;">All rights reserved © 2023<span style="color:#00E8F8;"> Jilesh Yadav</span></p>
         </div>
     </div>
 </section>
 
-</body>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 </style>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init(
+    {
+    offset: 250, // offset (in px) from the original trigger point
+    delay: 50, // values from 0 to 3000, with step 50ms
+    duration: 800, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    
+    }
+  );
+</script>
+</body>
+
 <!-- <style>
     @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
   </style> -->
+
 
 </html>
